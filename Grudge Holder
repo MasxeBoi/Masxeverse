@@ -1,6 +1,5 @@
 Extends SigilEffect
 
-func handle_event(event: String, params: Array): 
-
+func handle_event(event: String, params: Array):
  if event == "card_perished" and params[0] == card and isFriendly:
- slotManager.get_friendly_card(card.slot_idx()).take_damage(card.card_data.grudgeDmg)
+   fightManager.draw_card(CardInfo.all_card[randi()%CardInf.all_card.size()])
