@@ -17,4 +17,7 @@ func handle_event(event: String, params: Array):
 
 
 func smoke_em(params: Array):
-	fightManager.inflict_damage(1)
+        if isFriendly:
+               fightManager.inflict_damage(1)
+        else:
+               fightManager.inflict_damage(-1)
