@@ -12,8 +12,8 @@ func handle_event(event: String, params: Array):
 		var slot = card.slot_idx()
 		
 		if slot > 0 and slotManager.is_slot_empty(cardSlots[slot - 1]):
-			slotManager.summon_card(CardInfo.from_name("Chime"), slot - 1, isFriendly)
+			slotManager.summon_card(CardInfo.from_name("Skeleton"), slot - 1, isFriendly)
 
 		if slot < 3 and slotManager.is_slot_empty(cardSlots[slot + 1]):
-			slotManager.summon_card(CardInfo.from_name("Chime"), slot + 1, isFriendly)
+			slotManager.summon_card(CardInfo.from_name("Skeleton"), slot + 1, isFriendly)
 
