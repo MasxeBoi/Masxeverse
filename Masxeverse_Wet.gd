@@ -8,7 +8,7 @@ func handle_event(event: String, params: Array):
 
 		var enemies = slotManager.all_enemy_cards() if isFriendly else slotManager.all_friendly_cards()
 		
-		for fCard in friendlies:
+		for fCard in enemies:
 			if fCard == card:
 				continue
 			
