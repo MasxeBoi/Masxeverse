@@ -11,5 +11,5 @@ func handle_event(event: String, params: Array):
 		
 		for card in slotManager.all_friendly_cards() if isFriendly else slotManager.all_enemy_cards():
 			if "Mox" in card.card_data.name:
-				params[0].power += 1
+				params[0].damage += 1
 				params[0].health += 1
