@@ -11,12 +11,5 @@ func handle_event(event: String, params: Array):
 		
 		for card in slotManager.all_friendly_cards() if isFriendly else slotManager.all_enemy_cards():
 			if "Mox" in card.card_data.name:
-				atk_acc += 1
-				hp_acc += 1
-		
-		var new_data = card.card_data
-		
-		new_data.attack = atk_acc += 1
-		new_data.health = max(1, hp_acc += 1)
-		
-		card.from_data(new_data)
+				params[0].attack += 1
+				params[0].health += 1
