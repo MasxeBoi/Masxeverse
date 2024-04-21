@@ -11,10 +11,8 @@ func handle_event(event: String, params: Array):
 		
 		for card in slotManager.all_friendly_cards() if isFriendly else slotManager.all_enemy_cards():
 			if "Mox" in card.card_data.name: #in theory activates for each friendly mox
-				continue
-			
-			atk_acc += 1
-			hp_acc += 1
+				atk_acc += 1
+				hp_acc += 1
 		
 		var new_data = card.card_data
 		
