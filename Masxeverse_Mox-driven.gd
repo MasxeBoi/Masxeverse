@@ -16,7 +16,7 @@ func handle_event(event: String, params: Array):
 		
 		var new_data = card.card_data
 		
-		new_data.attack = atk_acc
-		new_data.health = max(1, hp_acc)
+		new_data.attack = atk_acc += 1
+		new_data.health = max(1, hp_acc += 1)
 		
 		card.from_data(new_data)
