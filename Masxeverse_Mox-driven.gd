@@ -10,3 +10,4 @@ func handle_event(event: String, params: Array):
 			if "Mox" in card.card_data.name:
 				params[0].attack += 1
 				params[0].health += 1
+				params[0].draw_stats
