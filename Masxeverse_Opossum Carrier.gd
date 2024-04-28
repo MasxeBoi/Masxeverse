@@ -6,9 +6,6 @@ func handle_event(event: String, params: Array):
 	# attached_card_summoned represents the card bearing the sigil being summoned
 	if event == "card_summoned" and params[0] == card and isFriendly:
 
-		# Draw the oh possum
+		# Draw the oh possum twice
 		fightManager.draw_card(CardInfo.from_name("Opposum"))
-
-		for card:
-			if card.in_hand and "Opposum" in card.card_data.name:
-				card.bone_cost -= 1
+		fightManager.draw_card(CardInfo.from_name("Opposum")) #i know how to code (trust)
