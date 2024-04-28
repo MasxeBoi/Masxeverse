@@ -9,5 +9,6 @@ func handle_event(event: String, params: Array):
 		# Draw the oh possum
 		fightManager.draw_card(CardInfo.from_name("Opposum"))
 
-		if card.in_hand and "Opposum" in card.card_data.name:
-			card.bone_cost -= 1
+		for card:
+			if card.in_hand and "Opposum" in card.card_data.name:
+				card.bone_cost -= 1
