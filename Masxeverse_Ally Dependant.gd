@@ -16,6 +16,7 @@ func handle_event(event: String, params: Array):
 		
 			if slot > 0 and slotManager.is_slot_empty(cardSlots[slot - 1]):
 				card.get_node("AnimationPlayer").play("Perish")
-			else if slot < 3 and slotManager.is_slot_empty(cardSlots[slot + 1]):
+
+			if slot < 3 and slotManager.is_slot_empty(cardSlots[slot + 1]):
 				card.get_node("AnimationPlayer").play("Perish")
 		
