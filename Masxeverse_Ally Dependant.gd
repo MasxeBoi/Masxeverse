@@ -4,7 +4,7 @@ extends SigilEffect
 func handle_event(event: String, params: Array):
 
 	# attached_card_summoned represents the card bearing the sigil being summoned
-	if event == "card_summoned" and params[0] == card:
+	if (event == "card_summoned" and params[0] == card) or (event == "card_perished" and params[0] != card):
 
 		# Die if no guys
 		if not "Perish" in card.get_node("AnimationPlayer").current_animation:
@@ -16,7 +16,6 @@ func handle_event(event: String, params: Array):
 		
 			if slot > 0 and slotManager.is_slot_empty(cardSlots[slot - 1]):
 				card.get_node("AnimationPlayer").play("Perish")
-
-			if slot < 3 and slotManager.is_slot_empty(cardSlots[slot + 1]):
+			else if slot < 3 and slotManager.is_slot_empty(cardSlots[slot + 1]):
 				card.get_node("AnimationPlayer").play("Perish")
 		
